@@ -7,47 +7,58 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TourTableViewController: UITableViewController {
     
-    var selectedTour: Int?
+    var realm: Realm!
+    var stones: Results<Stone>?
+    
+    var selectedTour: Tour? {
+        didSet{
+            loadStones()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(selectedTour!)
+        
+        realm = try! Realm()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        //Set the title in the nav bar
+        title = selectedTour?.tourName
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+         return stones?.count ?? 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoneCell", for: indexPath)
+        
+        if let stone = stones?[indexPath.row] {
+            cell.textLabel?.text = stone.name
+        } else {
+            cell.textLabel?.text = "No stones in the database"
+        }
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +104,14 @@ class TourTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK - Model Manipulation Method
+    func loadStones(){
+        
+        stones = selectedTour?.stones.sorted(byKeyPath: "runningNumber", ascending: true)
+        
+        tableView.reloadData()
+    }
+    
     
 }

@@ -172,7 +172,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="O7j-9z-4CI" kind="show" identifier="tourButtonSelected" id="HVh-kq-5BH"/>
+                        <segue destination="O7j-9z-4CI" kind="show" identifier="tourButtonPressed" id="HVh-kq-5BH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
