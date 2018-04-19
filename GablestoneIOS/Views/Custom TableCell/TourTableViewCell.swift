@@ -10,6 +10,13 @@ import UIKit
 
 class TourTableViewCell: UITableViewCell {
 
+    @IBOutlet var stoneImage: UIImageView!
+    
+    @IBOutlet weak var stoneName: UILabel!
+    
+    @IBOutlet weak var stoneAddress: UILabel!
+    
+    @IBOutlet weak var stoneCheckMark: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

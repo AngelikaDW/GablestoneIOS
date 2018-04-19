@@ -51,7 +51,7 @@ class SelectTourViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tourButtonPressed" {
             let destinationVC = segue.destination as! TourTableViewController
-            destinationVC.selectedTour = tours?[selectedTour!-1]
+            destinationVC.selectedTour = tours?[selectedTour! - 1]
         }
     }
     
