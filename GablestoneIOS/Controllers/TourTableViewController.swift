@@ -13,7 +13,7 @@ class TourTableViewController: UITableViewController {
     
     var realm: Realm!
     var stones: Results<Stone>?
-    
+    var selectedTourNumber: Int?
     var selectedTour: Tour? {
         didSet{
             loadStones()
@@ -24,7 +24,8 @@ class TourTableViewController: UITableViewController {
         super.viewDidLoad()
         
         realm = try! Realm()
-         tableView.rowHeight = 160
+        tableView.rowHeight = 160
+        print(selectedTourNumber)
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -59,7 +60,7 @@ class TourTableViewController: UITableViewController {
         if let stone = stones?[indexPath.row] {
             cell.stoneName.text = stone.name
             cell.stoneAddress.text = stone.address
-            cell.stoneImage.image = UIImage(named: "img2_\(stone.runningNumber)")
+            cell.stoneImage.image = UIImage(named: "img\(selectedTourNumber!)_\(stone.runningNumber)")
         } else {
             cell.stoneName.text = "No stones in the database"
         }

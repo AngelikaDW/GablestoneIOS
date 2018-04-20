@@ -52,6 +52,7 @@ class SelectTourViewController: UIViewController {
         if segue.identifier == "tourButtonPressed" {
             let destinationVC = segue.destination as! TourTableViewController
             destinationVC.selectedTour = tours?[selectedTour! - 1]
+            destinationVC.selectedTourNumber = selectedTour
         }
     }
     

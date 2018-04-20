@@ -41,26 +41,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amsMap" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-2F-9XL">
-                                <rect key="frame" x="0.0" y="144" width="375" height="297"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="294"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JORDAAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpQ-pb-yZx" userLabel="tourName1">
-                                <rect key="frame" x="16" y="454" width="208" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="451" width="208" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmin Canals and historic houses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-HL-NgZ" userLabel="tourDescriptionLabel1">
-                                <rect key="frame" x="16" y="466" width="264" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charming Canals and historic houses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-HL-NgZ" userLabel="tourDescriptionLabel1">
+                                <rect key="frame" x="16" y="463" width="264" height="47"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6F-Vn-qPM" userLabel="tourBtn1">
-                                <rect key="frame" x="288" y="461" width="71" height="30"/>
+                                <rect key="frame" x="288" y="458" width="71" height="32"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="RHV-e6-UjS"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="TOUR 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -69,8 +70,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK8-So-3WB" userLabel="tourBtn1">
-                                <rect key="frame" x="160" y="200" width="71" height="30"/>
+                                <rect key="frame" x="128" y="214" width="71" height="32"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="sat-u4-Hsi"/>
+                                    <constraint firstAttribute="height" constant="32" id="tPb-SX-J43"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="TOUR 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -79,8 +85,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viy-Qd-gq0" userLabel="tourBtn2">
-                                <rect key="frame" x="288" y="519" width="71" height="30"/>
+                                <rect key="frame" x="288" y="518" width="71" height="32"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="TOUR 2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -88,9 +95,26 @@
                                     <action selector="tourButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHT-dX-gbt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD CENTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-zj-hIU" userLabel="tourName2">
+                                <rect key="frame" x="16" y="518" width="192" height="26"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ever since home to merchants and sailors" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-c6-B45" userLabel="tourDescriptionLabel2">
+                                <rect key="frame" x="16" y="539" width="279" height="46"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="893-aR-6pF" userLabel="tourBtn2">
-                                <rect key="frame" x="234" y="259" width="71" height="30"/>
+                                <rect key="frame" x="224" y="275" width="71" height="32"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="M00-Lx-qFq"/>
+                                    <constraint firstAttribute="height" constant="32" id="RHS-qM-KjN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="TOUR 2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -98,24 +122,6 @@
                                     <action selector="tourButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IT2-Tg-sE0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-hc-n4N">
-                                <rect key="frame" x="143" y="218" width="36" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="BLJ-a6-zig"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OLD CENTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-zj-hIU" userLabel="tourName2">
-                                <rect key="frame" x="16" y="519" width="192" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ever since home to merchants and sailors" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-c6-B45" userLabel="tourDescriptionLabel2">
-                                <rect key="frame" x="16" y="540" width="279" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,39 +134,34 @@
                             <constraint firstItem="jAk-HL-NgZ" firstAttribute="top" secondItem="1Bp-2F-9XL" secondAttribute="bottom" constant="25" id="DJp-Qs-Wv9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XnU-c6-B45" secondAttribute="trailing" constant="80" id="E3B-EU-KV3"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="trailing" secondItem="Z6F-Vn-qPM" secondAttribute="trailing" id="HW6-Mh-LI1"/>
-                            <constraint firstItem="893-aR-6pF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="259" id="IQK-wA-uJG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="893-aR-6pF" secondAttribute="trailing" constant="80" id="JJ9-OL-G4V"/>
                             <constraint firstItem="Z6F-Vn-qPM" firstAttribute="top" secondItem="1Bp-2F-9XL" secondAttribute="bottom" constant="20" id="JKy-n8-dyn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQi-hc-n4N" secondAttribute="trailing" constant="196" id="Ke1-85-TVz"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="top" secondItem="viy-Qd-gq0" secondAttribute="top" id="Mn2-2O-Xge"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="bottom" secondItem="vt0-oI-jci" secondAttribute="bottom" id="PAC-sz-3uy"/>
                             <constraint firstItem="cpQ-pb-yZx" firstAttribute="top" secondItem="1Bp-2F-9XL" secondAttribute="bottom" constant="13" id="R5J-aY-omF"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="baseline" secondItem="viy-Qd-gq0" secondAttribute="baseline" id="VKi-uh-Dit"/>
                             <constraint firstItem="cpQ-pb-yZx" firstAttribute="leading" secondItem="jAk-HL-NgZ" secondAttribute="leading" id="Wce-uE-uHZ"/>
+                            <constraint firstItem="vK8-So-3WB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="Xze-JM-Qig"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="baseline" secondItem="viy-Qd-gq0" secondAttribute="firstBaseline" id="ZJL-Zl-2yh"/>
-                            <constraint firstItem="893-aR-6pF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="234" id="ZVR-oY-Whn"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="leading" secondItem="vt0-oI-jci" secondAttribute="trailing" constant="8" symbolic="YES" id="Zub-DZ-EgN"/>
-                            <constraint firstItem="tQi-hc-n4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="aVo-hz-E5M"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aq8-ZK-tjl"/>
                             <constraint firstItem="viy-Qd-gq0" firstAttribute="top" secondItem="Z6F-Vn-qPM" secondAttribute="bottom" constant="28" id="bOm-NC-Vjk"/>
-                            <constraint firstItem="vK8-So-3WB" firstAttribute="top" secondItem="wvk-pj-GZR" secondAttribute="bottom" constant="56" id="cb6-Tj-ff3"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="top" secondItem="cpQ-pb-yZx" secondAttribute="bottom" constant="44" id="dkL-9K-441"/>
                             <constraint firstItem="Z6F-Vn-qPM" firstAttribute="leading" secondItem="cpQ-pb-yZx" secondAttribute="trailing" constant="64" id="eqs-sa-hE5"/>
                             <constraint firstItem="wvk-pj-GZR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fF5-CV-uQ9"/>
+                            <constraint firstItem="893-aR-6pF" firstAttribute="top" secondItem="wvk-pj-GZR" secondAttribute="bottom" constant="131" id="fc6-rw-izO"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="top" secondItem="jAk-HL-NgZ" secondAttribute="bottom" constant="8" symbolic="YES" id="gVn-Dc-QPX"/>
-                            <constraint firstItem="vK8-So-3WB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="gac-p2-iIP"/>
                             <constraint firstItem="wvk-pj-GZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iJr-hO-BDL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XnU-c6-B45" secondAttribute="bottom" constant="82" id="ixM-aY-2w4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vK8-So-3WB" secondAttribute="trailing" constant="144" id="j3L-0a-KLo"/>
+                            <constraint firstItem="vK8-So-3WB" firstAttribute="top" secondItem="wvk-pj-GZR" secondAttribute="bottom" constant="70" id="mO2-SU-bkz"/>
                             <constraint firstItem="Z6F-Vn-qPM" firstAttribute="leading" secondItem="jAk-HL-NgZ" secondAttribute="trailing" constant="8" symbolic="YES" id="nlm-jd-NeO"/>
                             <constraint firstItem="vt0-oI-jci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="o0Q-ga-ect"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="top" secondItem="vt0-oI-jci" secondAttribute="top" id="oQa-Fv-auz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AYS-zj-hIU" secondAttribute="bottom" constant="123" id="rW6-ig-33D"/>
                             <constraint firstItem="viy-Qd-gq0" firstAttribute="leading" secondItem="AYS-zj-hIU" secondAttribute="trailing" constant="80" id="s2F-Zp-0sB"/>
                             <constraint firstItem="1Bp-2F-9XL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tFD-nq-ID8"/>
-                            <constraint firstItem="tQi-hc-n4N" firstAttribute="top" secondItem="wvk-pj-GZR" secondAttribute="bottom" constant="74" id="w4I-Xn-xHd"/>
                             <constraint firstItem="vt0-oI-jci" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="wtG-ea-JXe"/>
                             <constraint firstItem="Z6F-Vn-qPM" firstAttribute="leading" secondItem="viy-Qd-gq0" secondAttribute="leading" id="wut-Kh-aaa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="893-aR-6pF" secondAttribute="trailing" constant="70" id="yVh-Sa-7WY"/>
                             <constraint firstItem="AYS-zj-hIU" firstAttribute="leading" secondItem="XnU-c6-B45" secondAttribute="leading" id="zDz-Qv-UTW"/>
                             <constraint firstItem="oNv-hi-DJi" firstAttribute="trailing" secondItem="viy-Qd-gq0" secondAttribute="trailing" id="zqY-MX-Vip"/>
                         </constraints>
@@ -187,9 +188,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favicon" id="m0S-07-tPh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoneCell" id="HdU-as-aK5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HdU-as-aK5" id="yhv-AD-tlA">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -207,7 +212,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uh-my-4XW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="117"/>
+            <point key="canvasLocation" x="1828" y="116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Bd-R1-GYG">
@@ -235,7 +240,6 @@
     <resources>
         <image name="amsMap" width="500" height="375"/>
         <image name="favicon" width="194" height="175"/>
-        <image name="pin" width="32" height="32"/>
         <image name="talkBackground" width="333" height="311"/>
     </resources>
 </document>
