@@ -36,6 +36,11 @@ class SelectTourViewController: UIViewController {
     
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //Set the title in the nav bar
+        title = "GablestoneQuest"
+    }
+    
     func loadTours() {
         tours = realm.objects(Tour.self)
     }

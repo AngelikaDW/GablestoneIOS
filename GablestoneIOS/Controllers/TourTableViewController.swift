@@ -25,8 +25,6 @@ class TourTableViewController: UITableViewController {
         
         realm = try! Realm()
         tableView.rowHeight = 160
-        print(selectedTourNumber)
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,11 +64,30 @@ class TourTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    //MARK: - TableView Delegate Methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "goToDetail", sender: self)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            //print("This is the row clicked: \(stones?[indexPath.row])")
+            destinationVC.selectedStone = stones?[indexPath.row]
+            print(selectedTourNumber!)
+            destinationVC.tourNumber = selectedTourNumber
+        }
+    }
+    
 
     
     // MARK - Model Manipulation Method
     func loadStones(){
-        
         stones = selectedTour?.stones.sorted(byKeyPath: "runningNumber", ascending: true)
         
         tableView.reloadData()

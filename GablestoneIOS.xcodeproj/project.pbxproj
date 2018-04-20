@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		227D00C2F0869E949B010005 /* Pods_GablestoneIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FCD6EAEDFFA1B6CD8B4458 /* Pods_GablestoneIOS.framework */; };
+		9913F0A02089E88100FF375B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913F09F2089E88100FF375B /* ContainerViewController.swift */; };
+		9913F0A42089F7EF00FF375B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913F0A32089F7EF00FF375B /* DetailViewController.swift */; };
 		9914C987208880F300BA555E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C986208880F300BA555E /* AppDelegate.swift */; };
 		9914C989208880F300BA555E /* SelectTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C988208880F300BA555E /* SelectTourViewController.swift */; };
 		9914C98C208880F300BA555E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914C98A208880F300BA555E /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		83FCD6EAEDFFA1B6CD8B4458 /* Pods_GablestoneIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GablestoneIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9913F09F2089E88100FF375B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		9913F0A32089F7EF00FF375B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9914C983208880F300BA555E /* GablestoneIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GablestoneIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9914C986208880F300BA555E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9914C988208880F300BA555E /* SelectTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTourViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				9914C988208880F300BA555E /* SelectTourViewController.swift */,
+				9913F09F2089E88100FF375B /* ContainerViewController.swift */,
 				9914C99C2088A44500BA555E /* TourTableViewController.swift */,
+				9913F0A32089F7EF00FF375B /* DetailViewController.swift */,
 				9914C99D2088A44500BA555E /* TourTableViewController.xib */,
 			);
 			path = Controllers;
@@ -272,10 +278,12 @@
 			files = (
 				9914C9A62088AFA600BA555E /* Stone.swift in Sources */,
 				9914C989208880F300BA555E /* SelectTourViewController.swift in Sources */,
+				9913F0A02089E88100FF375B /* ContainerViewController.swift in Sources */,
 				9914C9A42088AC7B00BA555E /* Tour.swift in Sources */,
 				9914C9AA2088BCF100BA555E /* TourTableViewCell.swift in Sources */,
 				9914C99E2088A44500BA555E /* TourTableViewController.swift in Sources */,
 				9914C987208880F300BA555E /* AppDelegate.swift in Sources */,
+				9913F0A42089F7EF00FF375B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
