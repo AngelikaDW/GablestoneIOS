@@ -21,7 +21,7 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
         
         print("ContainerVC \(selectedTourNumber!)")
-        //print(selectedTour)
+        print(selectedTour)
     }
     
     override func viewWillAppear(_ animated: Bool) {

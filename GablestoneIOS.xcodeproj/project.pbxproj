@@ -21,6 +21,7 @@
 		9914C9A62088AFA600BA555E /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C9A52088AFA600BA555E /* Stone.swift */; };
 		9914C9AA2088BCF100BA555E /* TourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C9A82088BCF100BA555E /* TourTableViewCell.swift */; };
 		9914C9AB2088BCF100BA555E /* TourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9914C9A92088BCF100BA555E /* TourTableViewCell.xib */; };
+		99186268208DC0AC00A0634A /* MissionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99186267208DC0AC00A0634A /* MissionTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9914C9A52088AFA600BA555E /* Stone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stone.swift; sourceTree = "<group>"; };
 		9914C9A82088BCF100BA555E /* TourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewCell.swift; sourceTree = "<group>"; };
 		9914C9A92088BCF100BA555E /* TourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TourTableViewCell.xib; sourceTree = "<group>"; };
+		99186267208DC0AC00A0634A /* MissionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableVC.swift; sourceTree = "<group>"; };
 		D4DDC63B30F35FC73B17DE1B /* Pods-GablestoneIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GablestoneIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GablestoneIOS/Pods-GablestoneIOS.release.xcconfig"; sourceTree = "<group>"; };
 		EC5308597B7E55F954C977F1 /* Pods-GablestoneIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GablestoneIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GablestoneIOS/Pods-GablestoneIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		9914C9A02088AC2400BA555E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				99186267208DC0AC00A0634A /* MissionTableVC.swift */,
 				9914C988208880F300BA555E /* SelectTourViewController.swift */,
 				9913F09F2089E88100FF375B /* ContainerViewController.swift */,
 				9914C99C2088A44500BA555E /* TourTableViewController.swift */,
@@ -284,6 +287,7 @@
 				9914C99E2088A44500BA555E /* TourTableViewController.swift in Sources */,
 				9914C987208880F300BA555E /* AppDelegate.swift in Sources */,
 				9913F0A42089F7EF00FF375B /* DetailViewController.swift in Sources */,
+				99186268208DC0AC00A0634A /* MissionTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

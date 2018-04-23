@@ -25,6 +25,7 @@ class DetailViewController: UIViewController{
         super.viewDidLoad()
         //stoneNameLabel.text = selectedStone?.name
         updateUI()
+        stoneDescriptionLabel.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +41,7 @@ class DetailViewController: UIViewController{
         stoneNameLabel.text = selectedStone?.name
         stoneAddressLabel.text = selectedStone?.address
         stoneDescriptionLabel.text = selectedStone?.descriptionLong
-        
+        stoneImage.image = UIImage(named: "img\(tourNumber!)_\((selectedStone?.runningNumber)!)")
     }
     
     /*
