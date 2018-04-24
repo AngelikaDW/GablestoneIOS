@@ -93,11 +93,11 @@
 		9914C9A02088AC2400BA555E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				99186267208DC0AC00A0634A /* MissionTableVC.swift */,
 				9914C988208880F300BA555E /* SelectTourViewController.swift */,
-				9913F09F2089E88100FF375B /* ContainerViewController.swift */,
 				9914C99C2088A44500BA555E /* TourTableViewController.swift */,
 				9913F0A32089F7EF00FF375B /* DetailViewController.swift */,
+				99186267208DC0AC00A0634A /* MissionTableVC.swift */,
+				9913F09F2089E88100FF375B /* ContainerViewController.swift */,
 				9914C99D2088A44500BA555E /* TourTableViewController.xib */,
 			);
 			path = Controllers;

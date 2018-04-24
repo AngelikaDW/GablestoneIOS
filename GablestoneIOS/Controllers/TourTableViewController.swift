@@ -27,7 +27,7 @@ class TourTableViewController: UITableViewController {
         tableView.rowHeight = 160
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+//        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -35,7 +35,6 @@ class TourTableViewController: UITableViewController {
         
         //Register the TourTableCell.xib file here:
         tableView.register(UINib(nibName:"TourTableViewCell", bundle: nil), forCellReuseIdentifier: "StoneCell")
-        
         
     }
     
@@ -84,7 +83,6 @@ class TourTableViewController: UITableViewController {
         }
     }
     
-
     
     // MARK - Model Manipulation Method
     func loadStones(){
