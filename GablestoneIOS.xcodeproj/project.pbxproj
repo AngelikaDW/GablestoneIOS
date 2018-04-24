@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		227D00C2F0869E949B010005 /* Pods_GablestoneIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FCD6EAEDFFA1B6CD8B4458 /* Pods_GablestoneIOS.framework */; };
+		99089C6B208F566600A35BA3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99089C6A208F566600A35BA3 /* MapViewController.swift */; };
 		9913F0A02089E88100FF375B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913F09F2089E88100FF375B /* ContainerViewController.swift */; };
 		9913F0A42089F7EF00FF375B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913F0A32089F7EF00FF375B /* DetailViewController.swift */; };
 		9914C987208880F300BA555E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C986208880F300BA555E /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		83FCD6EAEDFFA1B6CD8B4458 /* Pods_GablestoneIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GablestoneIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99089C6A208F566600A35BA3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9913F09F2089E88100FF375B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9913F0A32089F7EF00FF375B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9914C983208880F300BA555E /* GablestoneIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GablestoneIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		9914C9A02088AC2400BA555E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				99089C6A208F566600A35BA3 /* MapViewController.swift */,
 				9914C988208880F300BA555E /* SelectTourViewController.swift */,
 				9914C99C2088A44500BA555E /* TourTableViewController.swift */,
 				9913F0A32089F7EF00FF375B /* DetailViewController.swift */,
@@ -263,9 +266,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GablestoneIOS/Pods-GablestoneIOS-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -282,6 +288,7 @@
 				9914C9A62088AFA600BA555E /* Stone.swift in Sources */,
 				9914C989208880F300BA555E /* SelectTourViewController.swift in Sources */,
 				9913F0A02089E88100FF375B /* ContainerViewController.swift in Sources */,
+				99089C6B208F566600A35BA3 /* MapViewController.swift in Sources */,
 				9914C9A42088AC7B00BA555E /* Tour.swift in Sources */,
 				9914C9AA2088BCF100BA555E /* TourTableViewCell.swift in Sources */,
 				9914C99E2088A44500BA555E /* TourTableViewController.swift in Sources */,
