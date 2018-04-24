@@ -49,9 +49,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func foundButtonPressed(_ sender: UIButton) {
-    }
-    
     
     func updateUI() {
         stoneNameLabel.text = selectedStone?.name
@@ -77,20 +74,30 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func foundStonePressed(_ sender: UIButton) {
-        var stoneLocation = CLLocation(latitude: 52.3703, longitude: 4.895)
+        //to be extracted from db
+        var stoneLocation = CLLocation(latitude: (selectedStone?.latitude)!, longitude: (selectedStone?.longitude)!)
         //distance between user and stone in meters
         var distance = userLocation!.distance(from: stoneLocation)
         print(distance)
-        if distance < 25 {
-            //give feedback to user pop up
-            let alert = UIAlertController(title: "Congratulations!", message: "You have found the gablestone", preferredStyle: .alert)
-            present(alert, animated: true, completion: nil)
-            //write in realm data base match true
-        } else {
-            let alert = UIAlertController(title: "Gablestone", message: "Not there yet - keep on searching", preferredStyle: .alert)
-            present(alert, animated: true, completion: nil)
-        }
         
+        var titleAlert = ""
+        var messageAlert = ""
+        
+        
+        if distance <= 25 {
+            titleAlert = "Congratulations!"
+            messageAlert = "You have located the gablestone"
+        } else {
+            titleAlert = "Not there yet"
+            messageAlert = "Keep on searching for the gablestone"
+        }
+        let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Close", style: .default) { (action) in
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+   
     }
     /*
     // MARK: - Navigation

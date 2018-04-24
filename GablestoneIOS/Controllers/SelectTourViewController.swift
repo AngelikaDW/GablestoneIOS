@@ -23,16 +23,21 @@ class SelectTourViewController: UIViewController {
         
         loadTours()
 //Initially create entries into the realm DB
-//        do {
-//            try realm.write {
-//                let newTour = Tour()
-//                newTour.tourName = "Old Center"
-//                newTour.tourNumber = 2
-//                realm.add(newTour)
-//            }
-//        } catch {
-//            print("error saving tour \(error)")
-//        }
+        do {
+            try realm.write {
+                let newTour1 = Tour()
+                newTour1.tourName = "Jordaan"
+                newTour1.tourNumber = 1
+                realm.add(newTour1)
+                let newTour = Tour()
+                newTour.tourName = "Old Center"
+                newTour.tourNumber = 2
+                realm.add(newTour)
+                
+            }
+        } catch {
+            print("error saving tour \(error)")
+        }
     
     }
     
