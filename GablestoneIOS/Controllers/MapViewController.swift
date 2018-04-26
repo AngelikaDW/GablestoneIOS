@@ -8,41 +8,74 @@
 
 import UIKit
 import GoogleMaps
+import RealmSwift
 
 class MapViewController: UIViewController {
-    
-    // You don't need to modify the default init(nibName:bundle:) method.
+    var realm: Realm!
+    var stones: Results<Stone>?
+    var selectedTourNumber: Int?
+    var selectedStone: Stone?
+    var selectedTour: Tour? {
+        didSet{
+            loadStones()
+        }
+    }
+     
     
     override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        // Create a GMSCameraPosition
+        let stone = stones![3]
+        let camera = GMSCameraPosition.camera(withLatitude: stone.latitude, longitude: stone.longitude, zoom: 16.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        //Add markers
+        for stone in stones! {
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: stone.latitude, longitude: stone.longitude)
+            marker.title = String(stone.runningNumber) + " " + stone.name
+            marker.snippet = stone.address
+            marker.map = mapView
+            marker.icon = stone.match ? GMSMarker.markerImage(with: .green) : GMSMarker.markerImage(with: .blue)
+        }
+        //MyLocationButton
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        
+        //TODO: get google directions
+        
+        //open infowindow of stone clicked
+        let locationMarker = GMSMarker()
+        locationMarker.position = CLLocationCoordinate2D(latitude: (selectedStone?.latitude)!, longitude: (selectedStone?.longitude)!)
+        locationMarker.map = mapView
+        mapView.selectedMarker = locationMarker
+        locationMarker.appearAnimation = .pop
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        print("MapVC selectedTour: \(selectedTourNumber ?? 0)")
+            realm = try! Realm()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Set the title in the nav bar
+       // title = selectedTour?.tourName
+    }
+    
+    // MARK - Model Manipulation Method
+    func loadStones(){
+        stones = selectedTour?.stones.sorted(byKeyPath: "runningNumber", ascending: true)
     }
 
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func addMarkers() {
+        
+        
     }
-    */
 
 }

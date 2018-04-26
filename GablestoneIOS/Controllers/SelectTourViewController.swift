@@ -64,6 +64,8 @@ class SelectTourViewController: UIViewController {
             destinationVC.selectedTour = tours?[selectedTour! - 1]
             destinationVC.selectedTourNumber = selectedTour
         }
+        
+        
         if segue.identifier == "goToEmbed" {
             let destinationVC = segue.destination as! ContainerViewController
             destinationVC.selectedTour = tours? [selectedTour! - 1]

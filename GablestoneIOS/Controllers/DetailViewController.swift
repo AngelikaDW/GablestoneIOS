@@ -18,15 +18,18 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var stoneDescriptionLabel: UILabel!
     
     let realm = try! Realm()
-    
+    var selectedTour: Tour?
     var selectedStone: Stone?
-    var tourNumber: Int?
+    var tourNumber: Int = 0
     
     let locationManager = CLLocationManager()
     var userLocation : CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print ("DetailVC TourNumber: \(tourNumber)")
+        
+        
         updateUI()
         //Dynamic size of label
         stoneDescriptionLabel.sizeToFit()
@@ -44,17 +47,14 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         title = selectedStone?.name
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     func updateUI() {
         stoneNameLabel.text = selectedStone?.name
         stoneAddressLabel.text = selectedStone?.address
         stoneDescriptionLabel.text = selectedStone?.descriptionLong
-        stoneImage.image = UIImage(named: "img\(tourNumber!)_\((selectedStone?.runningNumber)!)")
+        stoneImage.image = UIImage(named: "img\(tourNumber)_\((selectedStone?.runningNumber)!)")
+        
     }
     
     //MARK: - Location Manager Delegate Methods
@@ -75,9 +75,9 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func foundStonePressed(_ sender: UIButton) {
         //to be extracted from db
-        var stoneLocation = CLLocation(latitude: (selectedStone?.latitude)!, longitude: (selectedStone?.longitude)!)
+        let stoneLocation = CLLocation(latitude: (selectedStone?.latitude)!, longitude: (selectedStone?.longitude)!)
         //distance between user and stone in meters
-        var distance = userLocation!.distance(from: stoneLocation)
+        let distance = userLocation!.distance(from: stoneLocation)
         print(distance)
         
         var titleAlert = ""
@@ -99,15 +99,22 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         present(alert, animated: true, completion: nil)
    
     }
-    /*
+   
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func mapButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToMap", sender: self)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMap" {
+            let destinationVC = segue.destination as! ContainerMapViewController
+            destinationVC.selectedTourNumber = tourNumber
+            destinationVC.selectedStone = selectedStone
+            destinationVC.selectedTour = selectedTour
+            
+        }
+    }
+
 
 }
 

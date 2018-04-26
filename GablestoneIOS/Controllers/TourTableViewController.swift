@@ -79,7 +79,8 @@ class TourTableViewController: UITableViewController {
             //print("This is the row clicked: \(stones?[indexPath.row])")
             destinationVC.selectedStone = stones?[indexPath.row]
             print(selectedTourNumber!)
-            destinationVC.tourNumber = selectedTourNumber
+            destinationVC.tourNumber = selectedTourNumber!
+            destinationVC.selectedTour = selectedTour
         }
     }
     

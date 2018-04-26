@@ -22,6 +22,7 @@
 		9914C9A62088AFA600BA555E /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C9A52088AFA600BA555E /* Stone.swift */; };
 		9914C9AA2088BCF100BA555E /* TourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914C9A82088BCF100BA555E /* TourTableViewCell.swift */; };
 		9914C9AB2088BCF100BA555E /* TourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9914C9A92088BCF100BA555E /* TourTableViewCell.xib */; };
+		9915F41A2091D89A00681D04 /* ContainerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915F4192091D89A00681D04 /* ContainerMapViewController.swift */; };
 		99186268208DC0AC00A0634A /* MissionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99186267208DC0AC00A0634A /* MissionTableVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		9914C9A52088AFA600BA555E /* Stone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stone.swift; sourceTree = "<group>"; };
 		9914C9A82088BCF100BA555E /* TourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewCell.swift; sourceTree = "<group>"; };
 		9914C9A92088BCF100BA555E /* TourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TourTableViewCell.xib; sourceTree = "<group>"; };
+		9915F4192091D89A00681D04 /* ContainerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMapViewController.swift; sourceTree = "<group>"; };
 		99186267208DC0AC00A0634A /* MissionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableVC.swift; sourceTree = "<group>"; };
 		D4DDC63B30F35FC73B17DE1B /* Pods-GablestoneIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GablestoneIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GablestoneIOS/Pods-GablestoneIOS.release.xcconfig"; sourceTree = "<group>"; };
 		EC5308597B7E55F954C977F1 /* Pods-GablestoneIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GablestoneIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GablestoneIOS/Pods-GablestoneIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,10 +97,11 @@
 		9914C9A02088AC2400BA555E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				99089C6A208F566600A35BA3 /* MapViewController.swift */,
 				9914C988208880F300BA555E /* SelectTourViewController.swift */,
 				9914C99C2088A44500BA555E /* TourTableViewController.swift */,
 				9913F0A32089F7EF00FF375B /* DetailViewController.swift */,
+				9915F4192091D89A00681D04 /* ContainerMapViewController.swift */,
+				99089C6A208F566600A35BA3 /* MapViewController.swift */,
 				99186267208DC0AC00A0634A /* MissionTableVC.swift */,
 				9913F09F2089E88100FF375B /* ContainerViewController.swift */,
 				9914C99D2088A44500BA555E /* TourTableViewController.xib */,
@@ -288,6 +291,7 @@
 				9914C9A62088AFA600BA555E /* Stone.swift in Sources */,
 				9914C989208880F300BA555E /* SelectTourViewController.swift in Sources */,
 				9913F0A02089E88100FF375B /* ContainerViewController.swift in Sources */,
+				9915F41A2091D89A00681D04 /* ContainerMapViewController.swift in Sources */,
 				99089C6B208F566600A35BA3 /* MapViewController.swift in Sources */,
 				9914C9A42088AC7B00BA555E /* Tour.swift in Sources */,
 				9914C9AA2088BCF100BA555E /* TourTableViewCell.swift in Sources */,
